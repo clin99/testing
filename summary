@@ -1,0 +1,38 @@
+JOB_COUNT = 8000000
+
+jose (I manually set the thread count = 3):
+2.08287
+1.95785
+1.99467
+1.80185
+2.13754 
+
+tf:
+No clear = 2.45369 s 
+Runtime = 3.44415 s 
+
+No clear = 2.43215 s 
+Runtime = 3.40942 s 
+
+No clear = 2.39394 s 
+Runtime = 3.36786 s 
+
+No clear = 2.44293 s 
+Runtime = 3.41611 s 
+
+No clear = 2.41657 s 
+Runtime = 3.39076 s 
+
+tf (divide into chunks by 4):
+Runtime = 0.250227 s
+Runtime = 0.275447 s
+Runtime = 0.240663 s
+Runtime = 0.178505 s
+Runtime = 0.251347 s
+Runtime = 0.18162 s
+Runtime = 0.227156 s 
+
+
+
+
+

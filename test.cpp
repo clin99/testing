@@ -1,6 +1,6 @@
 #include <iostream>
 #include <atomic>
-
+#include <string.h>
 #include <chrono>
 
 #include "thread_pool.hpp"
@@ -28,7 +28,14 @@ void mywork(int a) {
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
+  bool use_tf {false};
+  if(argc > 1){
+    char temp [] = "tf";
+    if(strcmp(argv[1], temp) == 0){
+      use_tf = true;
+    }
+  }
   int JOB_COUNT = 8000000;
 
   Test1 t1;
@@ -36,8 +43,7 @@ int main() {
 
   auto tbeg = std::chrono::high_resolution_clock::now();
 
-  if(false) {
-  //if(true) {
+  if(!use_tf) {
     std::cout << "Profiling Jose\n";
     total = 0;
 
@@ -55,7 +61,7 @@ int main() {
     std::cout << "Profiling Taskflow\n";
     total = 0;
 
-    
+    /*
     speculative_threadpool::BasicSpeculativeThreadpool<std::function> pool(4);
     pool.silent_async([&](){ t1.inc_a(3); });
     std::deque<std::function<void()>> deq;
@@ -63,11 +69,13 @@ int main() {
       deq.emplace_back([&](){ mywork(1); });
     }
     pool.silent_async(std::move(deq));
+    */
+
     //for(int i = 0; i < JOB_COUNT; ++i) {
     //  pool.silent_async([&](){ mywork(1); });
     //}
 
-    /*
+    ///*
     tf::Taskflow tf;
 
     tf.silent_emplace([&](){ t1.inc_a(3); });
@@ -88,7 +96,7 @@ int main() {
     tf.wait_for_all();
     auto tend = std::chrono::high_resolution_clock::now();
     std::cout << "No clear = " << std::chrono::duration<double>(tend-tbeg).count() << " s \n";
-    */
+    //*/
   }
 
   auto tend = std::chrono::high_resolution_clock::now();
