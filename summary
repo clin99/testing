@@ -27,6 +27,29 @@ No clear = 8.45111 s
 Runtime = 8.45128 s 
 
 
+tf (divide into chunks by 4):
+No clear = 0.181406 s 
+Runtime = 0.181469 s 
+
+No clear = 0.276041 s 
+Runtime = 0.276125 s 
+
+No clear = 0.273189 s 
+Runtime = 0.273313 s 
+
+No clear = 0.268458 s 
+Runtime = 0.268555 s 
+
+No clear = 0.176367 s 
+Runtime = 0.17646 s 
+
+No clear = 0.267705 s 
+Runtime = 0.267822 s 
+
+No clear = 0.233641 s 
+Runtime = 0.233711 s 
+
+
 
 tf:
 No clear = 2.45369 s 
@@ -43,17 +66,5 @@ Runtime = 3.41611 s
 
 No clear = 2.41657 s 
 Runtime = 3.39076 s 
-
-tf (divide into chunks by 4):
-Runtime = 0.250227 s
-Runtime = 0.275447 s
-Runtime = 0.240663 s
-Runtime = 0.178505 s
-Runtime = 0.251347 s
-Runtime = 0.18162 s
-Runtime = 0.227156 s 
-
-
-
 
 
