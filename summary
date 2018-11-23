@@ -7,6 +7,27 @@ jose (I manually set the thread count = 3):
 1.80185
 2.13754 
 
+original tf:
+No clear = 8.35542 s 
+Runtime = 8.35554 s 
+
+No clear = 8.38692 s 
+Runtime = 8.38705 s 
+
+No clear = 8.64616 s 
+Runtime = 8.64634 s 
+
+No clear = 9.3251 s 
+Runtime = 9.32527 s 
+
+No clear = 8.64684 s 
+Runtime = 8.64697 s 
+
+No clear = 8.45111 s 
+Runtime = 8.45128 s 
+
+
+
 tf:
 No clear = 2.45369 s 
 Runtime = 3.44415 s 
